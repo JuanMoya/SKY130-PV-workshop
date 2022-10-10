@@ -79,6 +79,11 @@ To paint and erase layers in Magic.
 Instantiation of a 5V nfet and no guardring.
 ![Docker command](/Day1_images/17.PNG)
 
+Now, we implement the schematic of an inverter. It is important to mention that L=150nm is only available for the SRAM transistors, thus, we use the minimum length for other applications, L=180nm. Regarding W, it is important to mention that the W parameter in the properties of the transistors corresponds to the width of all the fingers.
+
+We present the schematic of the inverter.
+![Docker command](/Day1_images/18.PNG)
+
 #### Some useful key shortcuts for the differente tools.
 
 
@@ -88,8 +93,11 @@ Instantiation of a 5V nfet and no guardring.
 | E --> Down in hierarchy  | Z --> Zoom in  |
 | CTRL + E --> Up in hierarchy   | Shift + Z --> Zoom out  |
 | F --> Full view of main window   | While mouse on a layer, P --> paint the box with the layer  |
-|    | While mouse on a layer, E --> delete the box with the layer  |
-|    | V --> For view a complete layout  |
-|    | S + "what" in the command line--> Device type  |
+|  Shift + I --> Insert a device  | While mouse on a layer, E --> delete the box with the layer  |
+|  Shift + R --> Rotate a device  | V --> For view a complete layout  |
+|  C --> Copy a device  | S + "what" in the command line--> Device type  |
+|  Q --> Change properties of a device  |   |
+|  W --> Wire the devices  |   |
+
 ## Day 2 -  (Lab Instance)
 
