@@ -67,15 +67,24 @@ To exit the project, type: CTRL + E.
 Then let us go to Magic. We observe that the SkyWater technology is now associated to Magic.
 ![Docker command](/Day1_images/13.PNG)
 
+When we open Magic with the command "magic -d XR", we observe that the layer colores are more saturated than with the command above, due to the rendering of the Cairo graphics package.
+![Docker command](/Day1_images/14.PNG)
+
+Another possible graphics package is set with the commando "", which is a littel bit faster than with Cairo graphics.
+![Docker command](/Day1_images/15.PNG)
+
+To paint and erase layers in Magic.
+![Docker command](/Day1_images/16.PNG)
 
 #### Some useful key shortcuts for the differente tools.
 
 
 ##### For Xschem
-| For Xschem  | Second Header | 
+| For Xschem  | For Magic | 
 | ------------- | ------------- |
-| E --> Down in hierarchy  | Content Cell  |
-| CTRL + E --> Up in hierarchy   | Content Cell  |
-| F --> Full view of main window   | Content Cell  |
+| E --> Down in hierarchy  | Z --> Zoom in  |
+| CTRL + E --> Up in hierarchy   | Shift + Z --> Zoom out  |
+| F --> Full view of main window   | While mouse on a layer, P --> paint the box with the layer  |
+|    | While mouse on a layer, E --> delete the box with the layer  |
 ## Day 2 -  (Lab Instance)
 
