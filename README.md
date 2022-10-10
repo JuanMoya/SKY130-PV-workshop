@@ -129,6 +129,9 @@ We copy the testbench from xschem in the mag/ folder with: cp ../xschem/inverter
 
 ![Docker command](/Day1_images/32.PNG)
 
+We create the .spiceinit file in the mag folder like we created in the xschem directory with the command "cp ../xschem .spiceinit ."
+
+Finally we run the simulation with the command "ngspice inverter_tb spice".
 
 #### Some useful key shortcuts for the differente tools.
 
