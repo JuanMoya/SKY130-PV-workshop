@@ -23,8 +23,11 @@ We use the "xschem" command in the terminal to invoke Xschem.
 
 Finally, let us try with Ngspice.
 ![Docker command](/Day1_images/4.PNG)
-We use the "ngspice" command in the terminal to invoke Ngspice.
+We use the "ngspice" command in the terminal to invoke Ngspice. To leave Ngspice, just use type "quit" in the command line.
 
+There exist other possibilities for Magic and Ngspice. Let us check magic without the console.
+![Docker command](/Day1_images/5.PNG)
+We use the "magic -noconsole" command in the terminal to invoke Magic without the console.
 
 | First Header  | Second Header |
 | ------------- | ------------- |
