@@ -76,6 +76,9 @@ Another possible graphics package is set with the commando "", which is a littel
 To paint and erase layers in Magic.
 ![Docker command](/Day1_images/16.PNG)
 
+Instantiation of a 5V nfet and no guardring.
+![Docker command](/Day1_images/17.PNG)
+
 #### Some useful key shortcuts for the differente tools.
 
 
@@ -86,5 +89,7 @@ To paint and erase layers in Magic.
 | CTRL + E --> Up in hierarchy   | Shift + Z --> Zoom out  |
 | F --> Full view of main window   | While mouse on a layer, P --> paint the box with the layer  |
 |    | While mouse on a layer, E --> delete the box with the layer  |
+|    | V --> For view a complete layout  |
+|    | S + "what" in the command line--> Device type  |
 ## Day 2 -  (Lab Instance)
 
