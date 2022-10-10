@@ -55,14 +55,21 @@ To start the lab, we organize correctly the project by creating the following fo
 
 ![Docker command](/Day1_images/10.PNG)
 
-Now, let us text the setups.
+Now, let us check the setups.
+
+First for Xschem.
+![Docker command](/Day1_images/11 .PNG)
+
+To see the examples in the right top corner: Select a project and type E.
+![Docker command](/Day1_images/12 .PNG)
 
 #### Some useful key shortcuts for the differente tools.
 
-| First Header  | Second Header |
+##### For Xschem
+| For Xschem  | Second Header | 
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Main window  | Content Cell  |
+| 1)   | Content Cell  |
 
 ## Day 2 -  (Lab Instance)
 
