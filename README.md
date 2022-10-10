@@ -84,6 +84,23 @@ Now, we implement the schematic of an inverter. It is important to mention that 
 We present the schematic of the inverter.
 ![Docker command](/Day1_images/18.PNG)
 
+Configuration of the input PWL source. 
+![Docker command](/Day1_images/19.PNG)
+
+Configuration of the device model path and specification of the tt corner. 
+![Docker command](/Day1_images/20.PNG)
+
+Configuration of the transient simulation. 
+![Docker command](/Day1_images/21.PNG)
+
+Inverter simulation. 
+![Docker command](/Day1_images/22.PNG)
+
+We select the "LVS netlist: Top level is a .subckt" option in the inverter schematic.
+![Docker command](/Day1_images/23.PNG)
+
+The we click on "Netlist" and exist Xschem.
+
 #### Some useful key shortcuts for the differente tools.
 
 
