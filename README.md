@@ -79,7 +79,7 @@ To paint and erase layers in Magic.
 Instantiation of a 5V nfet and no guardring.
 ![Docker command](/Day1_images/17.PNG)
 
-Now, we implement the schematic of an inverter. It is important to mention that L=150nm is only available for the SRAM transistors, thus, we use the minimum length for other applications, L=180nm. Regarding W, it is important to mention that the W parameter in the properties of the transistors corresponds to the width of all the fingers.
+Now, we implement the schematic of an inverter. It is important to mention that L=150nm is only available for the SRAM transistors, thus, we use the minimum length for other applications, L=180nm. Regarding W, it is important to mention that the W parameter in the properties of the transistors corresponds to the width of all the fingers. Once we finish the schematic, we need to generate the symbol. We click on the Symbol menu and then on "Make symbol from schematic".
 
 We present the schematic of the inverter.
 ![Docker command](/Day1_images/18.PNG)
@@ -101,6 +101,21 @@ We select the "LVS netlist: Top level is a .subckt" option in the inverter schem
 
 The we click on "Netlist" and exist Xschem.
 
+For importing the schematic in Magic, open Magic, then click on the File menu and then on the option "Import SPICE". Remember that the schematic is in the xschem folder.
+![Docker command](/Day1_images/24.PNG)
+
+Configuration of the PFET guarding and drain and source contacts.
+![Docker command](/Day1_images/25.PNG)
+
+Configuration of the NFET guarding and drain and source contacts.
+![Docker command](/Day1_images/26.PNG)
+
+Once the layout is finished, click on Save, and then in autowrite.
+![Docker command](/Day1_images/27.PNG)
+
+Type the following commands for a first extraction. "extract do local" write all the results in the local directory, whereas "extract all" does the actual extraction.
+![Docker command](/Day1_images/28.PNG)
+
 #### Some useful key shortcuts for the differente tools.
 
 
@@ -113,8 +128,8 @@ The we click on "Netlist" and exist Xschem.
 |  Shift + I --> Insert a device  | While mouse on a layer, E --> delete the box with the layer  |
 |  Shift + R --> Rotate a device  | V --> For view a complete layout  |
 |  C --> Copy a device  | S + "what" in the command line--> Device type  |
-|  Q --> Change properties of a device  |   |
-|  W --> Wire the devices  |   |
+|  Q --> Change properties of a device  |  I --> For selecting the desired instance; Once selected with I and then CTRL + P to see the properties of the selected device|
+|  W --> Wire the devices  |  I + M to move the desired device |
 
 ## Day 2 -  (Lab Instance)
 
