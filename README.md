@@ -17,6 +17,10 @@ Then, let us try with Netgen.
 ![Docker command](/Day1_images/2.PNG)
 We use the "netgen" command in the terminal to invoke Netgen.
 
+Then, let us try with Xschem.
+![Docker command](/Day1_images/3.PNG)
+We use the "xschem" command in the terminal to invoke Xschem.
+
 
 | First Header  | Second Header |
 | ------------- | ------------- |
