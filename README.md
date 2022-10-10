@@ -10,8 +10,12 @@ Since the tools are already installed, let us first check the correct operation 
 
 Let us first try with Magic.
 
-![Docker command](/Day1_images/1.png)
+![Docker command](/Day1_images/1.PNG)
 We use the "magic" command in the terminal to invoke Magic.
+
+Then, let us try with Netgen.
+![Docker command](/Day1_images/2.PNG)
+We use the "netgen" command in the terminal to invoke Netgen.
 
 
 | First Header  | Second Header |
