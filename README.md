@@ -21,6 +21,10 @@ Then, let us try with Xschem.
 ![Docker command](/Day1_images/3.PNG)
 We use the "xschem" command in the terminal to invoke Xschem.
 
+Finally, let us try with Ngspice.
+![Docker command](/Day1_images/4.PNG)
+We use the "ngspice" command in the terminal to invoke Ngspice.
+
 
 | First Header  | Second Header |
 | ------------- | ------------- |
