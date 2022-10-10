@@ -116,6 +116,20 @@ Once the layout is finished, click on Save, and then in autowrite.
 Type the following commands for a first extraction. "extract do local" write all the results in the local directory, whereas "extract all" does the actual extraction.
 ![Docker command](/Day1_images/28.PNG)
 
+Then set the "ext2spice lvs" command to set the netlist generator for hierarchical spice output, ngspice format and no parasitic extraction, then "ext2spice" to create the spice netlist. We type "quit" to end Magic. In the mag/ folder we remove the intermediate results files with the commands "rm *.ext" and "/usr/share/pdk/bin/cleanup_unref.py -remove .". 
+
+For LVS comparison, we use the following command in the netgen folder: netgen -batch lvs "../mag/inverter.spice inverter" "../xschem/inverter.spice inverter".
+![Docker command](/Day1_images/29.PNG)
+
+Finally, we go back to magic, open the inverter layout with "magic -d XR inverter" and run the following commands.
+![Docker command](/Day1_images/30.PNG)
+
+We copy the testbench from xschem in the mag/ folder with: cp ../xschem/inverter_tb.spice. Then, we compare the order of the ports of the extracted layout with the ones defined in the inverter testbench. Moreover, we delete the section in red in the following figure to make an inclusion of the layout extracted netlist.
+![Docker command](/Day1_images/31.PNG)
+
+![Docker command](/Day1_images/32.PNG)
+
+
 #### Some useful key shortcuts for the differente tools.
 
 
