@@ -45,8 +45,24 @@ For Ngspice, the tool doesn't use the tcl language, so it is necessary to look i
 ![Docker command](/Day1_images/9.PNG)
 We use the "ngspice -b" command in the terminal to invoke Netgen without the console.
 
+Netgen has a GUI which can be run with the following command: "/usr/local/lib/netgen/python/lvs_manager.py". The problem with this GUI is that it hides many useful options, so it is not very recommended.
+
+Fo doing a correct layout with SkyWater SKY130 PDK, we must have a correct environment in Magic, which is set with the following command:"".
+
+### First warm-up lab, Inverter circuit.
+
+To start the lab, we organize correctly the project by creating the following folders for each of the tools. Then let we configure and set appropriately each of the tools with the following commands.
+
+![Docker command](/Day1_images/10.PNG)
+
+Now, let us text the setups.
+
+#### Some useful key shortcuts for the differente tools.
 
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
+
+## Day 2 -  (Lab Instance)
+
