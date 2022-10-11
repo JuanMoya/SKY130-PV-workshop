@@ -133,10 +133,15 @@ We create the .spiceinit file in the mag folder like we created in the xschem di
 
 Finally we run the simulation with the command "ngspice inverter_tb spice".
 
+
+
+## Day 2 -  (Lab Instance)
+
+
 #### Some useful key shortcuts for the differente tools.
 
 
-##### For Xschem
+##### For Xschem and Magic
 | For Xschem  | For Magic | 
 | ------------- | ------------- |
 | E --> Down in hierarchy  | Z --> Zoom in  |
@@ -147,6 +152,6 @@ Finally we run the simulation with the command "ngspice inverter_tb spice".
 |  C --> Copy a device  | S + "what" in the command line--> Device type  |
 |  Q --> Change properties of a device  |  I --> For selecting the desired instance; Once selected with I and then CTRL + P to see the properties of the selected device|
 |  W --> Wire the devices  |  I + M to move the desired device |
-
-## Day 2 -  (Lab Instance)
+|   |  S + X --> expand the layout |
+|   | > --> Descend in hierarchy |
 
