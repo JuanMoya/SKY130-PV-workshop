@@ -281,6 +281,23 @@ An then we open the file "sky130_fd_sc_hd__and2_1.spice"
 
 ![Docker command](/Day2_images/10.PNG)
 
+Let us run now batch drc, for this, we use the following commands:
+
+![Docker command](/Day2_images/11.PNG)
+
+As expected, there are some errors due to the lack of connections to substrate.
+
+To see the actual drc style in Magic, type **drc style**. If it is desirable to see the different drc styles, type **drc listall style**.
+
+The batch editor always run the drc(full) style, contraty to the Magic GUI. So to change the drc style to drc(full) we type **drc style drc(full)**. Then, we apply the **drc check** command.
+
+![Docker command](/Day2_images/12.PNG)
+
+To identify the different drc errors, type **drc why** and if it is desirable to see an specific one, type **drc find**.
+
+In another test cell call the **getcell sky130_fd_sc_hd__and2_1** command first and then **getcell sky130_fd_sc_hd__tapvpwrvgnd_1**.
+
+![Docker command](/Day2_images/13.PNG)
 
 #### Some useful key shortcuts and commands for the differente tools.
 
