@@ -123,6 +123,7 @@ For LVS comparison, we use the following command in the netgen folder: netgen -b
 
 Finally, we go back to magic, open the inverter layout with "magic -d XR inverter" and run the following commands.
 ![Docker command](/Day1_images/30.PNG)
+It is important to mention that the "ext2spice lvs" command is used for LVS, whereas using "ext2spice lvs" and  "ext2spice cthresh 0" commands incorporate the parasitics for netgen simulation.
 
 We copy the testbench from xschem in the mag/ folder with: cp ../xschem/inverter_tb.spice. Then, we compare the order of the ports of the extracted layout with the ones defined in the inverter testbench. Moreover, we delete the section in red in the following figure to make an inclusion of the layout extracted netlist.
 ![Docker command](/Day1_images/31.PNG)
@@ -132,10 +133,11 @@ We copy the testbench from xschem in the mag/ folder with: cp ../xschem/inverter
 We create the .spiceinit file in the mag folder like we created in the xschem directory with the command "cp ../xschem .spiceinit ."
 
 Finally we run the simulation with the command "ngspice inverter_tb spice".
+![Docker command](/Day1_images/33.PNG)
 
 
 
-## Day 2 -  (Lab Instance)
+## Day 2 -  Labs for GDS read write extraction, DRC, LVS and XOR setup (Lab Instance)
 
 
 #### Some useful key shortcuts and commands for the differente tools.
