@@ -138,7 +138,7 @@ Finally we run the simulation with the command "ngspice inverter_tb spice".
 ## Day 2 -  (Lab Instance)
 
 
-#### Some useful key shortcuts for the differente tools.
+#### Some useful key shortcuts and commands for the differente tools.
 
 
 ##### For Xschem and Magic
@@ -154,4 +154,11 @@ Finally we run the simulation with the command "ngspice inverter_tb spice".
 |  W --> Wire the devices  |  I + M to move the desired device |
 |   |  S + X --> expand the layout |
 |   | > --> Descend in hierarchy |
+|   | B --> Show coordinates, area |
+|   | ? --> Ask drc error |
+|   | : erase "name layer" --> erase the layer selected in the box |
+|   | : CIF "name layer" --> shows the layer selected in the box |
+|   | : side --> flip shape
+|   | : splitpaint sw "name layer" --> create triangular of the layer selected in the box (south west position of the box filled) ||
+|   | : rotate 90 --> rotates 90° a figure ||
 
