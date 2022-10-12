@@ -198,6 +198,25 @@ If it is desirable to deactive the noduplicates option, we type **gds noduplicat
 
 To see the port index, we select a port (only once at a time) and we type **port index**.
 
+If we want information about a specific port we type the following commands:
+
+* **port first**
+* **port 1 name**
+* **port 1 class**
+* **port 1 use**
+
+To get to the lef data we use the following command in Magic: **lef read /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef_sky130_fd_sc_hd.lef**. We run the following commands to get more information about the ports, which was not possible with the gds file.
+
+![Docker command](/Day2_images/3.PNG)
+
+To read the spice file we use the folowing command in Magic: **readspice /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef_sky130_fd_sc_hd.spice**.
+
+With the latter, we identify that the port names match with the spice netlist.
+
+![Docker command](/Day2_images/4.PNG)
+
+Now, let us look the abstract view.
+
 #### Some useful key shortcuts and commands for the differente tools.
 
 
