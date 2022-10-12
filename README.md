@@ -161,4 +161,5 @@ Finally we run the simulation with the command "ngspice inverter_tb spice".
 |   | : side --> flip shape
 |   | : splitpaint sw "name layer" --> create triangular of the layer selected in the box (south west position of the box filled) ||
 |   | : rotate 90 --> rotates 90° a figure ||
+|   | : CIF cover MET1 --> informs density of MET1 ||
 
