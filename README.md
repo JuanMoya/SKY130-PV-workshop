@@ -180,8 +180,23 @@ Finally we run the simulation with the command **ngspice inverter_tb spice**.
 
 ## Day 2 -  Labs for GDS read write extraction, DRC, LVS and XOR setup (Lab Instance)
 
-In Magic, to see the current styles, we use the following commads.
+To see the possible styles and the current styles in Magic, we type the folowing commands.
 
+![Docker command](/Day2_images/1.PNG)
+
+To read the gds files (library), we use the command in Magic **gds read /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds**.
+
+To see the name of the top cells, we run the command **cellname top** or we in the magic menu we can go to "Options" and then click on "Cell Manager".
+
+If it is desirable to change the style of a cell, we can type the following commands in Magic: **cif istyle sky130()** and then rerun **gds read /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds**.
+
+If we don't want to overwrite existing cells when reading from gds, we type the command **gds noduplicates** to see if it is activate or not. If it not activate, a "0" should appear, the we type **gds noduplicates true**.
+
+![Docker command](/Day2_images/2.PNG)
+
+If it is desirable to deactive the noduplicates option, we type **gds noduplicates flase** and rerun **gds read /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds**.
+
+To see the port index, we select a port (only once at a time) and we type **port index**.
 
 #### Some useful key shortcuts and commands for the differente tools.
 
