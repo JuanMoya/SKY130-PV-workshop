@@ -180,6 +180,8 @@ Finally we run the simulation with the command **ngspice inverter_tb spice**.
 
 ## Day 2 -  Labs for GDS read write extraction, DRC, LVS and XOR setup (Lab Instance)
 
+In Magic, to see the current styles, we use the following commads.
+
 
 #### Some useful key shortcuts and commands for the differente tools.
 
