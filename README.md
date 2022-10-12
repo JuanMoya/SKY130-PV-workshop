@@ -217,6 +217,71 @@ With the latter, we identify that the port names match with the spice netlist.
 
 Now, let us look the abstract view.
 
+We type the following commands:
+
+* **lef read /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef_sky130_fd_sc_hd.lef**.
+
+![Docker command](/Day2_images/5.PNG)
+
+If there is a port order problem, we can solve with **readspice /usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef_sky130_fd_sc_hd.spice**.
+
+![Docker command](/Day2_images/6.PNG)
+
+We create a new magic file named test with the command in Magic **load test**.
+
+To call the and2_1 cell, we use the command **getcell sky130_fd_sc_hd__and2_1**.
+
+If we quit and type **gds read test** we observe again the test cell. But as expected there is an error since magic cannot write abstract views into gds.
+
+![Docker command](/Day2_images/7.PNG)
+
+Use the command **property** to see all the metada information.
+
+To force the vendor cell to be editable, we type in Magic the commands:
+
+![Docker command](/Day2_images/8.PNG)
+
+Then we type the following commands to see that the cell has the gds properties, which makes it readonly cell:
+
+* **load sky130_fd_sc_hd__and2_1**
+* **property**
+
+Now, let us look at extraction:
+
+Command for extraction:
+* **extract all**
+
+Then, commands for lvs:
+
+* **ext2spice lvs**
+* **ext2spice**
+
+Then, commands to consider parasitics capacitances:
+
+* **ext2spice cthresh 0**
+* **ext2spice**
+
+For the RC parasitics extraction:
+
+* **ext2sim labels on**
+* **ext2sim*
+* **extresist tolerance 10**
+* **extresist**
+
+![Docker command](/Day2_images/9.PNG)
+
+To get the final value with both resistances and capacitances parasitics, we use the following commands:
+
+* **ext2spice lvs**
+* **ext2spice cthresh 0.01**
+* **ext2spice exresist on**
+* **ext2spice**
+
+An then we open the file "sky130_fd_sc_hd__and2_1.spice"
+
+![Docker command](/Day2_images/10.PNG)
+
+
 #### Some useful key shortcuts and commands for the differente tools.
 
 
