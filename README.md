@@ -361,9 +361,18 @@ A first way to identify the drc errors is in Magic menu, click on "DRC", and the
 
 * For exercise_3b, first select in a box the inner area, type **erase M1** until the error is corrected.
 
+![Docker command](/Day3_images/3.png)
+
+For exercices_4, important to use the command **stret e 1um** to stretch the layers in a unique direction (e = east) and an specific distance (1um in this case).
+
+![Docker command](/Day3_images/4.png)
+
+For exercice 5, we use the commands in Magic **cif see DIFF**, **cif see POLY**, **cif see NSDM**, **cif see PSDM**, **cif see LVTN**, **cif see HVI**, and **cif see NPC** to see the different layers. To clear the layers, we use the command **feedback cl**.
 #### Some useful key bindings and commands for the differente tools.
 
-![Docker command](/Day3_images/3.png)
+![Docker command](/Day3_images/5.png)
+
+
 
 
 ##### For Xschem and Magic
@@ -387,4 +396,5 @@ A first way to identify the drc errors is in Magic menu, click on "DRC", and the
 |   | : splitpaint sw "name layer" --> create triangular of the layer selected in the box (south west position of the box filled) ||
 |   | : rotate 90 --> rotates 90° a figure ||
 |   | : CIF cover MET1 --> informs density of MET1 ||
+|   | : CRTL + Z --> To zoom in the specific box area ||
 
