@@ -345,7 +345,7 @@ A first way to identify the drc errors is in Magic menu, click on "DRC", and the
 
 * For Exercise_1d, we use the following command to separate stretch the metal piece. We select the top piece with "S" and then press the "8" key button to increase the distance.
 
-![Docker command](/Day1_images/1.PNG)
+![Docker command](/Day3_images/1.PNG)
 
 #### Some useful key bindings and commands for the differente tools.
 
