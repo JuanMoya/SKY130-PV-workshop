@@ -347,6 +347,20 @@ A first way to identify the drc errors is in Magic menu, click on "DRC", and the
 
 ![Docker command](/Day3_images/1.png)
 
+* For exercise_2a, first select the horizontal or vertical area that you want to strech, click on "A" and then "6".
+
+* For exercise_2b, first select the area with a box, type in Magic **cif see MCON**, to see the different MCON vias placed in the area. 
+
+* For exercise_2c, first select the area with a box, type in Magic **paint M1**. 
+
+* For exercise_2d, first select the metal, the click on space bar, generate a wire, shift key + click on left mouse button and start increasing in metals with the different vias. To go back down, shift key + right mouse button.
+
+![Docker command](/Day3_images/2.png)
+
+* For exercise_3a, first select the horizontal or vertical area that you want to strech, click on "A" and then "6".
+
+* For exercise_3b, first select in a box the inner area, type **erase M1** until the error is corrected.
+
 #### Some useful key bindings and commands for the differente tools.
 
 
