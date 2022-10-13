@@ -299,6 +299,42 @@ In another test cell call the **getcell sky130_fd_sc_hd__and2_1** command first 
 
 ![Docker command](/Day2_images/13.PNG)
 
+Now, let us run LVS with batch.
+
+We create a new folder named "netgen" and we copy the .tcl file as before with the command **cp -/usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl ./setup.tcl** and open the and2_1 cell in the mag folder.
+
+We then extract parasitics with the commands:
+
+* **ext2spice lvs**
+* **ext2spice**
+
+And then quit Magic.
+
+Then we come back to the netgen folder and then run the following command: **netgen -batch lvs "../mag/sky130_fd_sc_hd__and2_1.spice sky130_fd_sc_hd__and2_1" "../usr/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice sky130_fd_sc_hd__and2_1"**. 
+
+![Docker command](/Day2_images/14.PNG)
+
+Now, let us do an XOR comparison. For this, go to the /mag file open Magic. Then we load the and2_1 cell. We make our own local version of the cell with the command **save altered**, and then we load it with **load altered**. 
+
+We erase a piece of local interconnect layer connected to the output with the command typed in Magic **erase li**.
+
+![Docker command](/Day2_images/15.PNG)
+
+We create a third cell for the XOR result with the next commands:
+
+* **flatten -nolabels xor_test**
+* **load sky130_fd_sc_hd__and2_1**
+* **xor -nolabels xor_test**
+* **load xor_test**
+
+![Docker command](/Day2_images/16.PNG)
+
+## Day 3 -  Labs for all DRC rules (Lab Instance)
+
+To start the drc exercices, we clone the laboraty git with the command **git clone https://github.com/RTimothyEdwards/vsd_drc_lab.git** and then run Magic with **./run_magic** in the vsd_drc_lab folder.
+
+
+
 #### Some useful key shortcuts and commands for the differente tools.
 
 
