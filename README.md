@@ -333,9 +333,21 @@ We create a third cell for the XOR result with the next commands:
 
 To start the drc exercices, we clone the laboraty git with the command **git clone https://github.com/RTimothyEdwards/vsd_drc_lab.git** and then run Magic with **./run_magic** in the vsd_drc_lab folder.
 
+Let us open the first file "exercise_1" in Magic.
 
+A first way to identify the drc errors is in Magic menu, click on "DRC", and then again click on "DRC report". Let us set the grid with the menu option "Window" and then click on "Set grid 0.10um". Additionaly, in the same menu option, click on "Snap-to-grid on" to force the cursor aligned with the grid lines.
 
-#### Some useful key shortcuts and commands for the differente tools.
+* For exercise_1a, we select in a box the metal + the error area and then click on the middle mouse button to fill the complete area and eliminate the drc error. Another possibility is to select in a box the metal and then in magic type **: box width 0.14um**.
+
+* For Exercise_1b, we use the following command to separate even more the two metal pieces. We select the right piece with "S" and then press the "6" key button to increase the distance.
+
+* For Exercise_1c, we use the following command to separate even more the two metal pieces. We select the right piece with "S" and then press the "6" key button to increase the distance.
+
+* For Exercise_1d, we use the following command to separate stretch the metal piece. We select the top piece with "S" and then press the "8" key button to increase the distance.
+
+![Docker command](/Day1_images/1.PNG)
+
+#### Some useful key bindings and commands for the differente tools.
 
 
 ##### For Xschem and Magic
