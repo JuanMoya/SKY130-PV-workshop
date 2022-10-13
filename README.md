@@ -437,7 +437,9 @@ To see the top density:
 
 ## Day 4 - 
 
+The OpenLANE flow is presented.
 
+![Docker command](/Day4_images/1.png)
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
