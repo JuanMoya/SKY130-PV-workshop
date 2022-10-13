@@ -435,11 +435,33 @@ To see the top density:
 ![Docker command](/Day3_images/10.png)
 
 
-## Day 4 - 
+## Day 4 - Understanding PNR and physical verification (optional)
 
 The OpenLANE flow is presented.
 
 ![Docker command](/Day4_images/1.png)
+
+First of all, we need to install OpenLANE, for this we follow the instructions for the short version in the next link: https://github.com/The-OpenROAD-Project/OpenLane
+
+* First we install Docker with the following link: https://docs.docker.com/desktop/install/ubuntu/
+
+
+## Day 5 - Running LVS (Labs Instance)
+
+We download the project from git in the repository:
+
+* git clone https://github.com/RTimothyEdwards/vsd_lvs_lab.git
+
+For exercise 1, we use the following commands:
+
+* **cat netA.spice**
+* **diff netA.spice netB.spice** --> see the difference between both netA and netB files.
+* In netgen **lvs netA.spice netB.spice**
+
+Netgen does not care about what is in particular cell but what is the difference between two netlists. The meaningful output of netgen is the comp.out file.
+
+![Docker command](/Day5_images/1.png)
+
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
