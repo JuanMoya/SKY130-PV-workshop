@@ -363,7 +363,7 @@ A first way to identify the drc errors is in Magic menu, click on "DRC", and the
 
 ![Docker command](/Day3_images/3.png)
 
-For exercices_4, important to use the command **stret e 1um** to stretch the layers in a unique direction (e = east) and an specific distance (1um in this case).
+For exercises_4, important to use the command **stret e 1um** to stretch the layers in a unique direction (e = east) and an specific distance (1um in this case).
 
 ![Docker command](/Day3_images/4.png)
 
@@ -372,6 +372,67 @@ For exercice 5, we use the commands in Magic **cif see DIFF**, **cif see POLY**,
 
 ![Docker command](/Day3_images/5.png)
 
+For exercise 6, we need to abstract the view of the ESD layout to edit the cell. For this, we use the following commands: 
+
+* **I --> to select the cell.**
+* **cellname path sky130_fd_io__signal_5_sym_hv_local_5term**
+* **cellname path sky130_fd_io__signal_5_sym_hv_local_5term .**
+* **> --> go down the hierarchy**
+* **save**
+* **property**
+
+![Docker command](/Day3_images/6.png)
+
+For exercise 7, the commands used are: 
+
+* **splitpaint sw m1** --> to create the rectangle.
+* **cif see VIA2**
+* **A + "copy e 3um"**
+
+![Docker command](/Day3_images/7.png)
+
+For exercise 8, we generated the seal ring.
+
+For exercise 9, we must include the tap cells.
+
+* **getcell sky130_fd_sc_hd__tapvpwrvgnd_1**
+
+![Docker command](/Day3_images/8.png)
+
+For exercise 10, we use the following commands for antenna check.
+
+* **extract do local**
+* **extract all**
+* **antennacheck**
+* **feedback why**
+* **antennacheck debug**
+* **antennacheck**
+* **feedback clear**
+* **see no via2,m3**
+
+![Docker command](/Day3_images/9.png)
+
+For exercise 11, we use the following commands for density rules.
+* **cif cover MET1**
+* **cif cover MET2**
+* In another terminal: **/usr/share/pdk/sky130A/libs.tech/magic/check_density.py exercise_11.gds**
+* In another terminal: **/usr/share/pdk/sky130A/libs.tech/magic/generate_fill.py exercise_11.mag**
+* In magic: ** gds read exercise_11_fill_pattern** 
+* ** see no * ** 
+* ** see allm2 ** 
+* ** see m2fill ** 
+* ** load exercise_11 ** 
+* ** see * ** 
+* ** box values 0 0 0 0 ** 
+* ** getcell exercise_11_fill_pattern child 0 0 ** 
+* ** see no * ** 
+* ** see m2,m2fill  ** 
+
+To see the top density:
+* ** cif ostyle density **
+* ** cif cover m2_all ** 
+
+![Docker command](/Day3_images/10.png)
 
 
 
