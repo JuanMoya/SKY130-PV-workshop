@@ -363,6 +363,8 @@ A first way to identify the drc errors is in Magic menu, click on "DRC", and the
 
 #### Some useful key bindings and commands for the differente tools.
 
+![Docker command](/Day3_images/3.png)
+
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
