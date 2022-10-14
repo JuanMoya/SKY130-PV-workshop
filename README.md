@@ -551,13 +551,35 @@ Creation of the proxy pins when some pins are missing.
 
 ![Docker command](/Day5_images/6.png)
 
-Changing cell1 by cell4
+Changing cell1 by cell4.
 
 ![Docker command](/Day5_images/7.png)
 
 Including the blackbox option in ./run_lvs.sh
 
 ![Docker command](/Day5_images/8.png)
+
+For exercise 4, we use the following commands to swap pins:
+
+First, we copy the .tcl file in exercise_4.
+
+* **cp /usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl .**
+
+Then do the changes in the run_lvs.sh file.
+
+![Docker command](/Day5_images/9.png)
+
+Then do the changes in the sky130A_setup.tcl file.
+
+![Docker command](/Day5_images/10.png)
+
+Then do the changes in the netA.spice file.
+
+![Docker command](/Day5_images/11.png)
+
+Then we look the final output file.
+
+![Docker command](/Day5_images/12.png)
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
