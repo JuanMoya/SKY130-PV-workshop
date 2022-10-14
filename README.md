@@ -602,7 +602,7 @@ For extraction, do the following commands:
 
 * **extract do local**
 * **extract all**
-* **ext2spice**
+* **ext2spice lvs**
 * **ext2spice**
 
 * For Netgen:
@@ -633,6 +633,34 @@ We observe that there are unmatched pin errors. Follows the errors
 
 ![Docker command](/Day5_images/18.png)
 
+We load the user project wrapper with the command **load user_analog_project_wrapper**.
+
+We need to separate both nets with a metal resistor with the command **paint rmetal3**.
+
+We reextract with the following commands:
+
+* **extract do local**
+* **extract all**
+* **ext2spice lvs**
+* **ext2spice**
+
+And then we run **./run_lvs_wrapper.sh**
+
+Since  there are a lot of errors, we need to go to Xschem to include the metal resistor. To open Xschem, we use the command **xschem analog_wrapper_tb.sch**.
+
+![Docker command](/Day5_images/19.png)
+
+We rerun the "Netlist" and then we go to Netgen to run the command **./run_lvs_wrapper.sh**. As it is possible to observe, now there are only a few errors regarding unmatched pins.
+
+Then we go again to Xschem. It is posiible to observe that "io_oeb[26:0]", "io_clamp_high[2:0]" and "io_clamp_low[2:0]" are flotting pins.
+
+
+We go in Magic to the specific pin io_oeb[11] with the command **goto {io_oeb[11]}**. Then we go run the command **getnode**.
+
+![Docker command](/Day5_images/20.png)
+
+We should include the metal 3 resistances in both schematic and layout to get LVS clean.
+
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
@@ -657,4 +685,4 @@ We observe that there are unmatched pin errors. Follows the errors
 |   | : CIF cover MET1 --> informs density of MET1 ||
 |   | : CRTL + Z --> To zoom in the specific box area ||
 |   | : S + S + S --> Selects the node path in a layout ||
-
+|   | : getnode --> Gives the name of the node ||
