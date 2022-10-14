@@ -530,7 +530,7 @@ We use the commands in netgen:
 ![Docker command](/Day5_images/4.png)
 
 Finally, we run netgen with a batch script with the following commands: 
-* ** cat > run_lvs.sh
+* **cat > run_lvs.sh
 #!/bin/sh
  netgen -batch lvs "netA.spice test" "netB.spice test" /usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl exercise_2_comp.out -json | tee lvs.log
  echo ""
@@ -541,6 +541,23 @@ Finally, we run netgen with a batch script with the following commands:
 To run it, just type **./run_lvs.sh**
 
 
+For exercise 3, we use the following commands:
+* **./run_lvs.sh**
+* **vi exercises_3_comp.out**
+
+![Docker command](/Day5_images/5.png)
+
+Creation of the proxy pins when some pins are missing.
+
+![Docker command](/Day5_images/6.png)
+
+Changing cell1 by cell4
+
+![Docker command](/Day5_images/7.png)
+
+Including the blackbox option in ./run_lvs.sh
+
+![Docker command](/Day5_images/8.png)
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
@@ -564,4 +581,5 @@ To run it, just type **./run_lvs.sh**
 |   | : rotate 90 --> rotates 90° a figure ||
 |   | : CIF cover MET1 --> informs density of MET1 ||
 |   | : CRTL + Z --> To zoom in the specific box area ||
+|   | : S + S + S --> Selects the node path in a layout ||
 
