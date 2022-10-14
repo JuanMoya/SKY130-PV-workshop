@@ -441,10 +441,54 @@ The OpenLANE flow is presented.
 
 ![Docker command](/Day4_images/1.png)
 
+* The OpenLANE design stages
+
+* **1) Synthesis**
+
+* yosys --> For RTL synthesis
+* abc --> For Technology mapping
+* OpenSTA --> For Static timing analysis (generation of time reports)
+
+* **2) Floorplan and PDN**
+
+* init_fp --> For core area, rows, and tracks definition
+* ioplacer --> For macro input and output ports placement
+* pdn --> For power distribution network generation
+* tapcell --> For welltap and decap cells insertion
+
+* **3) Placement**
+
+* RePlace --> For global placement
+* Resizer --> For optional optimizaations on the design
+* OpenDP --> For detailed placementof the globally placed components
+
+* **4) CTS**
+
+* TritonCTS --> For clock tree synthesis
+
+* **5) Routing**
+
+* FastRoute --> For global routing to generate a file for the detailed router
+* CU-GR --> For global routing (another option).
+* TritonRoute --> For detailed routing
+* SPEF-Extractor --> For SPEF extraction
+
+* **6) GDSII Generation**
+
+* Magic --> For final GDSII layout file generation from the routed def
+* Klayout --> For final GDSII layout file generation from the routed def as a back-up
+
+* **7) Checks**
+
+* Magic --> For DRC and Antenna checks
+* Klayout --> For DRC checks
+* Netgen --> For LVS checks
+* CVC --> For Circuit Validity checks
+
+
 First of all, we need to install OpenLANE, for this we follow the instructions for the short version in the next link: https://github.com/The-OpenROAD-Project/OpenLane
 
 * First we install Docker with the following link: https://docs.docker.com/desktop/install/ubuntu/
-
 
 ## Day 5 - Running LVS (Labs Instance)
 
