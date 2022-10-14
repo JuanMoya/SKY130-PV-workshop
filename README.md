@@ -581,6 +581,59 @@ Then we look the final output file.
 
 ![Docker command](/Day5_images/12.png)
 
+For exercise 5, we use the following commands to create the netlists:
+
+* For Xschem:
+
+* **Click on Netlist button**
+
+* In Xschem, go to simulation menu option and then click on "LVS netlist: Top level is a .subckt"
+
+* ** Then again click on Netlist button** --> it is possible to observe that the first subcircuit is not commented.
+
+
+* For Magic:
+
+Open the "user_load_analog_project_wrapper.mag" file.
+
+![Docker command](/Day5_images/13.png)
+
+For extraction, do the following commands:
+
+* **extract do local**
+* **extract all**
+* **ext2spice**
+* **ext2spice**
+
+* For Netgen:
+
+There is a script to run lvs comparison.
+
+* **./run_lvs_wrapper.sh**
+
+We observe in the output file that there is a problem instantiating the standard buf_8 cell, creating proxy pins.
+
+![Docker command](/Day5_images/14.png)
+
+We come back to Xschem and run the following command: **xschem analog_wrapper_tb.sch**.
+
+Click on "Netlist".
+
+We edit the lvs launch script to point to the tb file. 
+
+We come back to Netgen and edit the "run_lvs_wrapper.sh" file.
+
+We observe that there are unmatched pin errors. Follows the errors
+
+![Docker command](/Day5_images/15.png)
+
+![Docker command](/Day5_images/16.png)
+
+![Docker command](/Day5_images/17.png)
+
+![Docker command](/Day5_images/18.png)
+
+
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
 | ------------- | ------------- |
