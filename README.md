@@ -462,6 +462,41 @@ Netgen does not care about what is in particular cell but what is the difference
 
 ![Docker command](/Day5_images/1.png)
 
+After editing the netA.spice file, we observe that this time lvs shows that there is a mitmatch between netlists.
+
+![Docker command](/Day5_images/2.png)
+
+For exercise 2, we use the following commands:
+
+* In netgen, each time we run lvs, we must use **reinitialize** to be sure that all the netlists were cleared from memory.
+
+In this case, we use the .subckt cell in both netA.spice and netB.spice. With this option, we observe that there is a problem while running lvs. The subcircuits are not considered active components.
+
+We can open nspice and run the netA.spice file to verify it. We use the command **ngspice netA.spice** and see that there is no error. 
+
+![Docker command](/Day5_images/3.png)
+
+We need to give to netgen the name of the subcircuits to avoid errors.
+
+We use the commands in netgen:
+
+* **reinitialize**
+* **lvs "netA.spice test" "netB.spice test"**
+
+![Docker command](/Day5_images/4.png)
+
+Finally, we run netgen with a batch script with the following commands: 
+* ** cat > run_lvs.sh
+#!/bin/sh
+ netgen -batch lvs "netA.spice test" "netB.spice test" /usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl exercise_2_comp.out -json | tee lvs.log
+ echo ""
+ ../count_lvs.py exercice_2_comp_json | tee -a lvs.log** 
+
+* **chmod a+x run_lvs.sh**
+
+To run it, just type **./run_lvs.sh**
+
+
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
