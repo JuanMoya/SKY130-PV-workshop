@@ -661,6 +661,30 @@ We go in Magic to the specific pin io_oeb[11] with the command **goto {io_oeb[11
 
 We should include the metal 3 resistances in both schematic and layout to get LVS clean.
 
+For exercise 6, we go to Magic. Then we load the digital PLL with **load digital_pll.mag**.
+
+We do the extraction with the following commands:
+
+* **extract do local**
+* **extract all**
+* **ext2spice lvs**
+* **ext2spice**
+
+![Docker command](/Day5_images/21.png)
+
+We use the **feedback why** to identify the errors. We then go to the netgen directory and run lvs with the **./run_lvs**. There are a several cells missing: tapvpwrvgnd_1, fill_1 and fill_2.
+
+![Docker command](/Day5_images/22.png)
+
+In Magic, we use the command **select cell FILLER_0_11** to look for the instance that is generating one of the errors.
+
+![Docker command](/Day5_images/23.png)
+
+We observe with the command **-usr/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl** that the taps are ignored.
+
+![Docker command](/Day5_images/24.png)
+
+Thus we must edit the "run_lvs" file with the following line.
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
