@@ -755,6 +755,38 @@ We need to do the extraction again and then we observe that there is a net misma
 
 ![Docker command](/Day5_images/40.png)
 
+We connect the _328_ cell to the A node.
+
+![Docker command](/Day5_images/41.png)
+
+We observe that the final mismatch correspond to a short since two networks are shorted in a single one. We erase the metal 1 layer shortening the two nodes.
+
+![Docker command](/Day5_images/42.png)
+
+There is a final pin error.
+
+![Docker command](/Day5_images/43.png)
+
+For exercise 8, we run Magic and extract. Then we go to Xschem, extract with the Netlist button and then do lvs. We observe that there are some property errors.
+
+![Docker command](/Day5_images/44.png)
+
+The circuit mismatches are:
+
+![Docker command](/Day5_images/45.png)
+
+Then we modify the Xschem testbench with the correct resistor and capacitor property values. The we click on the "Netlist" button and do the lvs.
+
+![Docker command](/Day5_images/46.png)
+
+There is only one more error.
+
+![Docker command](/Day5_images/47.png)
+
+We go to Magic and identify the mismatched cell.
+
+![Docker command](/Day5_images/48.png)
+
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
 | ------------- | ------------- |
@@ -779,3 +811,8 @@ We need to do the extraction again and then we observe that there is a net misma
 |   | : CRTL + Z --> To zoom in the specific box area ||
 |   | : S + S + S --> Selects the node path in a layout ||
 |   | : getnode --> Gives the name of the node ||
+|   | : select feedback --> selects a path helps avoiding loosing track ||
+|   | : fe cl --> to clear the feedback mentioned above ||
+|   | : CTRL + Z and then type bg --> to set Magic in the background ||
+|   | : fg --> to unset Magic in the background ||
+
