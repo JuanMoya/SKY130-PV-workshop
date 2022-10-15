@@ -727,6 +727,29 @@ And then run lvs. We observe that there are some mismatch errors.
 
 ![Docker command](/Day5_images/33.png) 
 
+We include the **export MAGIC_EXT_USE_GDS=1** line in the run_lvs.sh file. 
+
+![Docker command](/Day5_images/34.png)
+
+And then we rerun lvs. By grepping diode in both verilog and mag files with the commands below we observe that the diode was placed in the layout file to correct some antenna errors.
+
+![Docker command](/Day5_images/35.png)
+
+![Docker command](/Day5_images/36.png)
+
+We solve it by modifying the "../verilog/digital_pll.v" and including the instance.
+
+![Docker command](/Day5_images/37.png)
+
+There are still some decaps errors related to a broken path of power network.
+
+We observe that the power network "VPWR" is isolated.
+
+![Docker command](/Day5_images/38.png)
+
+We include the via3 to connect the power network mentioned above to the global power network. 
+
+![Docker command](/Day5_images/39.png)
 
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
