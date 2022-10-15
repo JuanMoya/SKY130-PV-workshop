@@ -686,6 +686,8 @@ We observe with the command **-usr/share/pdk/sky130A/libs.tech/netgen/sky130A_se
 
 Thus we must edit the "run_lvs" file with the following line.
 
+![Docker command](/Day5_images/25.png)
+
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
 | ------------- | ------------- |
