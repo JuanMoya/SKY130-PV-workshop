@@ -1,6 +1,7 @@
 # SKY130-Phisical Verification Workshop Using SkyWater 130nm Technology
 
-![Docker command](/Images/PV.jpg)
+<img src="https://github.com/JuanMoya/SKY130-PV-workshop/blob/main/Images/PV.jpg" width="800" height="300" />
+
 
 Here you can find all the material that I developed from the SKY 130 PV workshop during the period 10 October 2022 to 14 October 2022.
 
