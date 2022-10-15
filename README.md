@@ -688,6 +688,36 @@ Thus we must edit the "run_lvs" file with the following line.
 
 ![Docker command](/Day5_images/25.png)
 
+For exercise 7, we run Magic. We load the exercise with the command **load mgmt_protect.mag** and then we run the extraction commands.
+
+![Docker command](/Day5_images/26.png)
+
+Then we run the **./run_lvs.sh** command and see that there is something wrong. The error is "" Module 'mgmt_protect' is not structural verilog, making black-box."".
+
+Let us edit the verilog to line 242, since the inverter is not explicitly implied.
+
+![Docker command](/Day5_images/27.png)
+
+We correct the error by going to the gl subdirectory where the real gate level file is located and then edit the shell script to point to the gate level file.
+
+![Docker command](/Day5_images/28.png)
+
+Then run again the **./run_lvs.sh** command. There are still some errors. Let see in Magic.
+
+![Docker command](/Day5_images/29.png)
+
+We need to include a metal resistor in the ground nets to avoid having a short of vss nets. In other words, some parts of the substrate are not connected to other parts of the substrate.
+
+So, the actual solution is to merge all the vss nodes into a single ground/substrate node. We edit the /verilog/gl/mgmt_protect_hv.v file.
+
+![Docker command](/Day5_images/30.png)
+
+And then we do the merging in the top level cell /verilog/gl/mgmt_protect.v file by adding the same lines above and the two additional vssd lines.
+
+![Docker command](/Day5_images/31.png)
+
+We finally run again the lvs command.
+
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
 | ------------- | ------------- |
