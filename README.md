@@ -751,6 +751,10 @@ We include the via3 to connect the power network mentioned above to the global p
 
 ![Docker command](/Day5_images/39.png)
 
+We need to do the extraction again and then we observe that there is a net mismatch.
+
+![Docker command](/Day5_images/40.png)
+
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
 | ------------- | ------------- |
