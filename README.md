@@ -718,6 +718,16 @@ And then we do the merging in the top level cell /verilog/gl/mgmt_protect.v file
 
 We finally run again the lvs command.
 
+
+For exercise 8, we go to Magic and then load the cell "digital_pll.mag"
+
+![Docker command](/Day5_images/32.png)
+
+And then run lvs. We observe that there are some mismatch errors.
+
+![Docker command](/Day5_images/33.png) 
+
+
 ##### For Xschem and Magic
 | For Xschem  | For Magic | 
 | ------------- | ------------- |
